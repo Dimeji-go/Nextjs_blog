@@ -9,18 +9,6 @@ For Demo checkout following links👇: <br />
 
 ### ⭐DO NOT FORGET TO STAR THIS REPO⭐
 
-#### Home
-
-![Nextjs Personal Blog Website](https://nextjs-blog-azure-tau.vercel.app/)
-
-#### About
-
-![Nextjs Personal Blog Website About Page](https://nextjs-blog-azure-tau.vercel.app/about)
-
-#### Contact
-
-![Next.js Personal Blog Website Contact Page](https://nextjs-blog-azure-tau.vercel.app/contact)
-
 ### Resources Used in This Project
 
 - Character image in the About page created by using [Bing Search[(https://www.bing.com/).
