@@ -27,17 +27,27 @@ const Footer = () => {
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="mt-6 w-fit sm:min-w-[384px] flex items-stretch bg-light dark:bg-dark p-1 sm:p-2 rounded mx04"
+        aria-label="Email subscription form"
       >
+        <label htmlFor="email-input" className="sr-only">
+          Email Address
+        </label>
         <input
+          id="email-input"
           type="email"
           placeholder="Enter your email"
+          autoComplete="email"
+          aria-required="true"
+          aria-label="Email address for subscription"
           {...register("email", { required: true, maxLength: 80 })}
-          className="w-full bg-transparent pl-2 sm:pl-0 text-dark focus:border-dark focus:ring-0 border-0 border-b mr-2 pb-1"
+          className="w-full bg-transparent pl-2 sm:pl-0 text-dark dark:text-light focus:border-dark focus:ring-0 border-0 border-b mr-2 pb-1"
         />
 
         <input
           type="submit"
-          className="bg-dark text-light dark:text-dark dark:bg-light cursor-pointer font-medium rounded px-3 sm:px-5 py-1"
+          value="Subscribe"
+          aria-label="Submit email subscription"
+          className="bg-dark text-light dark:text-dark dark:bg-light cursor-pointer font-medium rounded px-3 sm:px-5 py-1 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </form>
       <div className="flex items-center mt-8">

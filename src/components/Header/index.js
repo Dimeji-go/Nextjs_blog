@@ -65,66 +65,68 @@ const Header = () => {
       </button>
 
       <nav
-        className=" w-max py-3 px-6 sm:px-8 border border-solid border-dark rounded-full font-medium capitalize  items-center flex  sm:hidden
-        fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50
-        transition-all ease duration-300
-        "
+        className="w-max py-3 px-6 sm:px-8 border border-solid border-dark rounded-full font-medium capitalize items-center flex sm:hidden fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50 transition-all ease duration-300"
         style={{
           top: click ? "1rem" : "-5rem",
         }}
       >
-        <Link href="/" className="mr-2">
-          Home
-        </Link>
-        <Link href="/about" className="mx-2">
-          About
-        </Link>
-        <Link href="/contact" className="mx-2">
-          Contact
-        </Link>
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={cx(
-            "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1",
-            mode === "light" ? "bg-dark text-light" : "bg-light text-dark",
-          )}
-          aria-label="theme-switcher"
-        >
-          {mode === "light" ? (
-            <MoonIcon className={"fill-dark"} />
-          ) : (
-            <SunIcon className={"fill-dark"} />
-          )}
-        </button>
+        <ul className="flex items-center list-none m-0 p-0">
+          <li className="mr-2">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="mx-2">
+            <Link href="/about">About</Link>
+          </li>
+          <li className="mx-2">
+            <Link href="/contact">Contact</Link>
+          </li>
+          <li>
+            <button
+              onClick={() => setMode(mode === "light" ? "dark" : "light")}
+              className={cx(
+                "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1",
+                mode === "light" ? "bg-dark text-light" : "bg-light text-dark",
+              )}
+              aria-label="theme-switcher"
+            >
+              {mode === "light" ? (
+                <MoonIcon className="fill-dark" />
+              ) : (
+                <SunIcon className="fill-dark" />
+              )}
+            </button>
+          </li>
+        </ul>
       </nav>
 
-      <nav
-        className=" w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize  items-center hidden sm:flex
-        fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50"
-      >
-        <Link href="/" className="mr-2">
-          Home
-        </Link>
-        <Link href="/about" className="mx-2">
-          About
-        </Link>
-        <Link href="/contact" className="mx-2">
-          Contact
-        </Link>
-        <button
-          onClick={() => setMode(mode === "light" ? "dark" : "light")}
-          className={cx(
-            "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1",
-            mode === "light" ? "bg-dark text-light" : "bg-light text-dark",
-          )}
-          aria-label="theme-switcher"
-        >
-          {mode === "light" ? (
-            <MoonIcon className={"fill-dark"} />
-          ) : (
-            <SunIcon className={"fill-dark"} />
-          )}
-        </button>
+      <nav className="w-max py-3 px-8 border border-solid border-dark rounded-full font-medium capitalize items-center hidden sm:flex fixed top-6 right-1/2 translate-x-1/2 bg-light/80 backdrop-blur-sm z-50">
+        <ul className="flex items-center list-none m-0 p-0">
+          <li className="mr-2">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="mx-2">
+            <Link href="/about">About</Link>
+          </li>
+          <li className="mx-2">
+            <Link href="/contact">Contact</Link>
+          </li>
+          <li>
+            <button
+              onClick={() => setMode(mode === "light" ? "dark" : "light")}
+              className={cx(
+                "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1",
+                mode === "light" ? "bg-dark text-light" : "bg-light text-dark",
+              )}
+              aria-label="theme-switcher"
+            >
+              {mode === "light" ? (
+                <MoonIcon className="fill-dark" />
+              ) : (
+                <SunIcon className="fill-dark" />
+              )}
+            </button>
+          </li>
+        </ul>
       </nav>
       <div className=" hidden sm:flex items-center">
         <a
@@ -149,4 +151,3 @@ const Header = () => {
 };
 
 export default Header;
-
